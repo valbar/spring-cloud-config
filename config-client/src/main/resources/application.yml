@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: myapp
+  config:
+    import: 'optional:configserver:http://localhost:8060'
+  profiles:
+    active: dev # dev - prod
+  cloud:
+    config:
+      label: master # master - 1.0.0
