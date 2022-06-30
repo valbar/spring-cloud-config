@@ -7,5 +7,10 @@ spring:
         git:
           uri: https://github.com/valbar/spring-config-server-data
           clone-on-start: true
+          default-label: master
+  security:
+      user:
+        name: admin
+        password: admin
 server:
   port: ${PORT:8060}

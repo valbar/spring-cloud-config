@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "13ad5f68-700c-446e-af98-6db4a2cd1259",
+		"name": "configserver",
+		"description": "server:  \n[http://localhost:8060/\\[appname\\]/\\[env\\]](http://localhost:8060/[appname]/[env])\n\nclient:  \nspring.application.name=myapp\n\nrepo:  \n[https://github.com/valbar/spring-config-server](https://github.com/valbar/spring-config-server)\n\nfiles \\[1.0.0\\]:  \napplication.properties  \nmyapp-dev.properties  \nmyapp-prod.properties\n\nfiles \\[master\\]:  \napplication.properties  \nmyapp-dev.properties  \nmyapp-prod.properties  \nanotherapp-dev.properties",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14429675"
+	},
+	"item": [
+		{
+			"name": "myapp/prod",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8060/myapp/prod",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"myapp",
+						"prod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myapp/prod/master",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8060/myapp/prod/master",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"myapp",
+						"prod",
+						"master"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myapp/prod/1.0.0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8060/myapp/prod/1.0.0",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"myapp",
+						"prod",
+						"1.0.0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myapp/dev",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8060/myapp/dev",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"myapp",
+						"dev"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myapp/dev/master",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8060/myapp/dev/master",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"myapp",
+						"dev",
+						"master"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myapp/dev/1.0.0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8060/myapp/dev/1.0.0",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"myapp",
+						"dev",
+						"1.0.0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "anotherapp/dev/master",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8060/anotherapp/dev/master",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"anotherapp",
+						"dev",
+						"master"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

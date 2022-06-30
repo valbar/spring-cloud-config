@@ -8,3 +8,5 @@ spring:
   cloud:
     config:
       label: master # master - 1.0.0
+      username: admin
+      password: admin
