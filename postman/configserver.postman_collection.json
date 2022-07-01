@@ -27,6 +27,50 @@
 			"response": []
 		},
 		{
+			"name": "encrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "test"
+				},
+				"url": {
+					"raw": "localhost:8060/encrypt",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "f69654a6876413bd6d24227d89d7d82ae8bd83b855e35a53788e93aa98d9b69e"
+				},
+				"url": {
+					"raw": "localhost:8060/decrypt",
+					"host": [
+						"localhost"
+					],
+					"port": "8060",
+					"path": [
+						"decrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "myapp/prod/master",
 			"request": {
 				"method": "GET",

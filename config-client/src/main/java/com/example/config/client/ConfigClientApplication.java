@@ -15,8 +15,14 @@ public class ConfigClientApplication {
     @Value("${common.ver}")
     private String ver;
 
+    @Value("${common.value}")
+    private String encryptedValue;
+    
+
     @Value("${env.config}")
     private String envConfig;
+
+
 
     public static void main(String[] args) {
         SpringApplication.run(ConfigClientApplication.class, args);
@@ -29,7 +35,9 @@ public class ConfigClientApplication {
             System.out.println("------");
             System.out.println("${common.config} : " + config);
             System.out.println("${common.ver} : " + ver);
+            System.out.println("${common.value} : " + encryptedValue);
             System.out.println("${env.config} : " + envConfig);
+
             System.out.println("------");
             System.out.println("");
         };

@@ -14,3 +14,5 @@ spring:
         password: admin
 server:
   port: ${PORT:8060}
+encrypt:
+  key: 1234567890ChangeMe
