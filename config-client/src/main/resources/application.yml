@@ -12,3 +12,10 @@ spring:
       password: admin
 encrypt:
   key: 1234567890ChangeMe
+# expose the /refresh endpoint used for the @RefreshScope bean
+# /actuator/refresh re-load the boot strap context and refresh the @RefreshScope beans.
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

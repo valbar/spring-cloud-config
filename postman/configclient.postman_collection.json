@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "33cc50b0-701c-44ee-a967-d1ea720600c7",
+		"name": "configclient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14429675"
+	},
+	"item": [
+		{
+			"name": "actuator/refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/actuator/refresh",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "config/json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/rest/config",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"config"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/config",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"config"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

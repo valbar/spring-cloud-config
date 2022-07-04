@@ -2,15 +2,14 @@ package com.example.config.client;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 // RefreshScope is a bean in the context and has a public method to refresh all beans in the scope by clearing the target cache.
 @RefreshScope
-// use template engine - if annotated with controller
-@Controller
-public class SimpleController {
+// do not use template engine - if annotated with restcontroller
+@RestController
+public class SimpleRestController {
     
     @Value("${common.config}")
     private String config;
@@ -22,14 +21,15 @@ public class SimpleController {
     private String encryptedValue;
     
 
-    @RequestMapping("/config")
-    public String getConfig(Model m) {
 
-        m.addAttribute("ver", ver);
+    @RequestMapping("/rest/config")
+    public ResponseModel getConfig() {
 
-        //name of view
-        return "config";
+        ResponseModel response = new ResponseModel();
+        response.setStatus(true);
+        String message = config + " - " + ver + " - " + encryptedValue;
+        response.setMessage(message);
+        return response;
         
-    }
-}
+    }}
 
