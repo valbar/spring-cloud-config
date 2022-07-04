@@ -10,3 +10,5 @@ spring:
       label: master # master - 1.0.0
       username: admin
       password: admin
+encrypt:
+  key: 1234567890ChangeMe
